@@ -1,7 +1,16 @@
 package fr.univamu.iut.exo4;
 
+import fr.univamu.iut.Conteneur;
+
+import java.util.Collection;
+
 public class GestionExpeditions {
-    public static void main(String[] args) {
-        throw new RuntimeException("Not yet implemented !");
+    public static void main(String[] args)
+    {
+        Collection<Conteneur> MesConteneurs = Lecteur.charger("Conteneurs.ser");
+        for (Conteneur monConteneur : MesConteneurs)
+        {
+            System.out.println(monConteneur.toString());
+        }
     }
 }
