@@ -1,5 +1,9 @@
 package fr.univamu.iut.exo5;
 
+import fr.univamu.iut.Conteneur;
+
 public interface Tarif {
-    public double calculerTarif();
+
+    double calculerTarif(Conteneur conteneur);
+
 }

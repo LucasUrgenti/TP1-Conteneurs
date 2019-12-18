@@ -19,7 +19,6 @@ public class Conteneur implements Serializable {
         this.expediteur = expediteur;
         this.poids = poids;
         this.destination = destination;
-        this.t = new TarifMiles();
     }
 
     public Integer getDistance()
@@ -33,13 +32,17 @@ public class Conteneur implements Serializable {
         return this.destination;
     }
 
+    public String getExpediteur() {
+        return expediteur;
+    }
+
     public int getpoids()
     {
         return this.poids;
     }
 
     public double getTarif( Tarif t){
-        return t.calculerTarif();
+        return t.calculerTarif(this);
     }
 
     @Override
